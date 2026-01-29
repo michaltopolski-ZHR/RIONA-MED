@@ -47,9 +47,6 @@ compile_commands.json
 .idea/
 .vscode/
 
-# Program outputs (example outdir used in README)
-results/
-
 # LaTeX build artifacts (RAPORT.tex)
 *.aux
 *.bbl

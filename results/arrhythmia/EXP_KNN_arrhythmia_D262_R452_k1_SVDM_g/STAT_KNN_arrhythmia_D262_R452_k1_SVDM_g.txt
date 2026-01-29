@@ -1,0 +1,321 @@
+InputFile: arrhythmia.arff
+Attributes: 262
+Objects: 452
+Algorithm: KNN
+Mode: g
+k: 1
+NominalDistance: SVDM
+Times(ms): read=64.9197, preprocess=1.094, classify=835.063, write=21.2551, total=8222.22
+d (number of classes): 13
+ClassCounts: 12=2 10=25 2=50 1=245 11=3 3=4 7=15 5=22 6=44 8=15 9=13 13=9 4=5
+NumericStats (global):
+  attr[0]: min=0, max=83, range=83
+  attr[1]: min=0, max=1, range=1
+  attr[2]: min=105, max=780, range=675
+  attr[3]: min=6, max=176, range=170
+  attr[4]: min=55, max=188, range=133
+  attr[5]: min=0, max=524, range=524
+  attr[6]: min=232, max=509, range=277
+  attr[7]: min=108, max=381, range=273
+  attr[8]: min=0, max=205, range=205
+  attr[9]: min=-172, max=169, range=341
+  attr[10]: min=-177, max=179, range=356
+  attr[11]: min=-170, max=176, range=346
+  attr[12]: min=-135, max=166, range=301
+  attr[13]: min=-179, max=178, range=357
+  attr[14]: min=44, max=163, range=119
+  attr[15]: min=0, max=88, range=88
+  attr[16]: min=0, max=156, range=156
+  attr[17]: min=0, max=88, range=88
+  attr[18]: min=0, max=24, range=24
+  attr[19]: min=0, max=100, range=100
+  attr[20]: min=0, max=1, range=1
+  attr[21]: min=0, max=1, range=1
+  attr[22]: min=0, max=1, range=1
+  attr[23]: min=0, max=1, range=1
+  attr[24]: min=0, max=1, range=1
+  attr[25]: min=0, max=1, range=1
+  attr[26]: min=0, max=76, range=76
+  attr[27]: min=0, max=132, range=132
+  attr[28]: min=0, max=92, range=92
+  attr[29]: min=0, max=36, range=36
+  attr[30]: min=0, max=56, range=56
+  attr[31]: min=0, max=76, range=76
+  attr[32]: min=0, max=1, range=1
+  attr[33]: min=0, max=1, range=1
+  attr[34]: min=0, max=1, range=1
+  attr[35]: min=0, max=1, range=1
+  attr[36]: min=0, max=1, range=1
+  attr[37]: min=0, max=1, range=1
+  attr[38]: min=0, max=92, range=92
+  attr[39]: min=0, max=116, range=116
+  attr[40]: min=0, max=132, range=132
+  attr[41]: min=0, max=64, range=64
+  attr[42]: min=0, max=44, range=44
+  attr[43]: min=0, max=92, range=92
+  attr[44]: min=0, max=1, range=1
+  attr[45]: min=0, max=1, range=1
+  attr[46]: min=0, max=1, range=1
+  attr[47]: min=0, max=1, range=1
+  attr[48]: min=0, max=1, range=1
+  attr[49]: min=0, max=1, range=1
+  attr[50]: min=0, max=136, range=136
+  attr[51]: min=0, max=80, range=80
+  attr[52]: min=0, max=80, range=80
+  attr[53]: min=0, max=84, range=84
+  attr[54]: min=0, max=32, range=32
+  attr[55]: min=0, max=92, range=92
+  attr[56]: min=0, max=1, range=1
+  attr[57]: min=0, max=1, range=1
+  attr[58]: min=0, max=1, range=1
+  attr[59]: min=0, max=1, range=1
+  attr[60]: min=0, max=1, range=1
+  attr[61]: min=0, max=1, range=1
+  attr[62]: min=0, max=88, range=88
+  attr[63]: min=0, max=148, range=148
+  attr[64]: min=0, max=92, range=92
+  attr[65]: min=0, max=44, range=44
+  attr[66]: min=0, max=96, range=96
+  attr[67]: min=0, max=1, range=1
+  attr[68]: min=0, max=1, range=1
+  attr[69]: min=0, max=1, range=1
+  attr[70]: min=0, max=1, range=1
+  attr[71]: min=0, max=1, range=1
+  attr[72]: min=0, max=88, range=88
+  attr[73]: min=0, max=128, range=128
+  attr[74]: min=0, max=120, range=120
+  attr[75]: min=0, max=44, range=44
+  attr[76]: min=0, max=44, range=44
+  attr[77]: min=0, max=80, range=80
+  attr[78]: min=0, max=1, range=1
+  attr[79]: min=0, max=1, range=1
+  attr[80]: min=0, max=1, range=1
+  attr[81]: min=0, max=1, range=1
+  attr[82]: min=0, max=1, range=1
+  attr[83]: min=0, max=140, range=140
+  attr[84]: min=0, max=216, range=216
+  attr[85]: min=0, max=116, range=116
+  attr[86]: min=0, max=80, range=80
+  attr[87]: min=0, max=28, range=28
+  attr[88]: min=0, max=116, range=116
+  attr[89]: min=0, max=1, range=1
+  attr[90]: min=0, max=1, range=1
+  attr[91]: min=0, max=1, range=1
+  attr[92]: min=0, max=1, range=1
+  attr[93]: min=0, max=1, range=1
+  attr[94]: min=0, max=1, range=1
+  attr[95]: min=0, max=132, range=132
+  attr[96]: min=0, max=216, range=216
+  attr[97]: min=0, max=108, range=108
+  attr[98]: min=0, max=72, range=72
+  attr[99]: min=0, max=32, range=32
+  attr[100]: min=0, max=96, range=96
+  attr[101]: min=0, max=1, range=1
+  attr[102]: min=0, max=1, range=1
+  attr[103]: min=0, max=1, range=1
+  attr[104]: min=0, max=1, range=1
+  attr[105]: min=0, max=1, range=1
+  attr[106]: min=0, max=1, range=1
+  attr[107]: min=0, max=96, range=96
+  attr[108]: min=0, max=132, range=132
+  attr[109]: min=0, max=112, range=112
+  attr[110]: min=0, max=76, range=76
+  attr[111]: min=0, max=36, range=36
+  attr[112]: min=0, max=88, range=88
+  attr[113]: min=0, max=1, range=1
+  attr[114]: min=0, max=1, range=1
+  attr[115]: min=0, max=1, range=1
+  attr[116]: min=0, max=1, range=1
+  attr[117]: min=0, max=1, range=1
+  attr[118]: min=0, max=1, range=1
+  attr[119]: min=0, max=88, range=88
+  attr[120]: min=0, max=92, range=92
+  attr[121]: min=0, max=124, range=124
+  attr[122]: min=0, max=24, range=24
+  attr[123]: min=0, max=40, range=40
+  attr[124]: min=0, max=60, range=60
+  attr[125]: min=0, max=1, range=1
+  attr[126]: min=0, max=1, range=1
+  attr[127]: min=0, max=1, range=1
+  attr[128]: min=0, max=1, range=1
+  attr[129]: min=0, max=88, range=88
+  attr[130]: min=0, max=136, range=136
+  attr[131]: min=0, max=120, range=120
+  attr[132]: min=0, max=60, range=60
+  attr[133]: min=0, max=132, range=132
+  attr[134]: min=0, max=1, range=1
+  attr[135]: min=0, max=1, range=1
+  attr[136]: min=0, max=1, range=1
+  attr[137]: min=0, max=88, range=88
+  attr[138]: min=0, max=148, range=148
+  attr[139]: min=0, max=108, range=108
+  attr[140]: min=0, max=28, range=28
+  attr[141]: min=0, max=104, range=104
+  attr[142]: min=0, max=1, range=1
+  attr[143]: min=0, max=1, range=1
+  attr[144]: min=0, max=1, range=1
+  attr[145]: min=0, max=1, range=1
+  attr[146]: min=-9, max=1.4, range=10.4
+  attr[147]: min=-2.7, max=0, range=2.7
+  attr[148]: min=0, max=19.9, range=19.9
+  attr[149]: min=-13.8, max=0, range=13.8
+  attr[150]: min=0, max=1.9, range=1.9
+  attr[151]: min=-1.5, max=1.7, range=3.2
+  attr[152]: min=-8.7, max=3.7, range=12.4
+  attr[153]: min=-33.3, max=155.2, range=188.5
+  attr[154]: min=-38.8, max=74.3, range=113.1
+  attr[155]: min=-3.9, max=1.9, range=5.8
+  attr[156]: min=-3.4, max=0, range=3.4
+  attr[157]: min=0, max=19.2, range=19.2
+  attr[158]: min=-16.5, max=0, range=16.5
+  attr[159]: min=0, max=3.2, range=3.2
+  attr[160]: min=-1.5, max=0, range=1.5
+  attr[161]: min=-1.5, max=3.4, range=4.9
+  attr[162]: min=-4.4, max=7.2, range=11.6
+  attr[163]: min=-43, max=64.6, range=107.6
+  attr[164]: min=-38.5, max=87.1, range=125.6
+  attr[165]: min=-1.7, max=5.1, range=6.8
+  attr[166]: min=-16.5, max=0, range=16.5
+  attr[167]: min=0, max=21.7, range=21.7
+  attr[168]: min=-16.3, max=0, range=16.3
+  attr[169]: min=0, max=14.9, range=14.9
+  attr[170]: min=-1.7, max=0, range=1.7
+  attr[171]: min=-2.8, max=2.2, range=5
+  attr[172]: min=-7, max=7.1, range=14.1
+  attr[173]: min=-74, max=66.7, range=140.7
+  attr[174]: min=-58.6, max=95.8, range=154.4
+  attr[175]: min=-1.9, max=6.4, range=8.3
+  attr[176]: min=-16, max=0, range=16
+  attr[177]: min=0, max=11.8, range=11.8
+  attr[178]: min=-12.8, max=0, range=12.8
+  attr[179]: min=0, max=3.5, range=3.5
+  attr[180]: min=-0.4, max=0, range=0.4
+  attr[181]: min=-2.3, max=1.3, range=3.6
+  attr[182]: min=-3.9, max=6.4, range=10.3
+  attr[183]: min=-96.5, max=26.3, range=122.8
+  attr[184]: min=-82.7, max=10.7, range=93.4
+  attr[185]: min=-7.1, max=2.6, range=9.7
+  attr[186]: min=-8.7, max=0, range=8.7
+  attr[187]: min=0, max=15.6, range=15.6
+  attr[188]: min=-13.3, max=0, range=13.3
+  attr[189]: min=0, max=2.3, range=2.3
+  attr[190]: min=-1.4, max=2, range=3.4
+  attr[191]: min=-6.7, max=5.1, range=11.8
+  attr[192]: min=-38.7, max=115.4, range=154.1
+  attr[193]: min=-42.1, max=46.1, range=88.2
+  attr[194]: min=-1.7, max=2.5, range=4.2
+  attr[195]: min=-6.8, max=0, range=6.8
+  attr[196]: min=0, max=19.9, range=19.9
+  attr[197]: min=-15.4, max=0, range=15.4
+  attr[198]: min=0, max=9.1, range=9.1
+  attr[199]: min=-4.5, max=0, range=4.5
+  attr[200]: min=-2.1, max=2.7, range=4.8
+  attr[201]: min=-5.5, max=7, range=12.5
+  attr[202]: min=-44, max=64.2, range=108.2
+  attr[203]: min=-49.4, max=69.1, range=118.5
+  attr[204]: min=-4.5, max=16.6, range=21.1
+  attr[205]: min=-19.1, max=0, range=19.1
+  attr[206]: min=0, max=26, range=26
+  attr[207]: min=-37.8, max=0, range=37.8
+  attr[208]: min=0, max=19.2, range=19.2
+  attr[209]: min=-2.9, max=0, range=2.9
+  attr[210]: min=-3.5, max=1.8, range=5.3
+  attr[211]: min=-4.9, max=16.7, range=21.6
+  attr[212]: min=-216, max=268.9, range=484.9
+  attr[213]: min=-107.2, max=247.1, range=354.3
+  attr[214]: min=-4.1, max=10, range=14.1
+  attr[215]: min=-30.3, max=0, range=30.3
+  attr[216]: min=0, max=28.5, range=28.5
+  attr[217]: min=-43.3, max=0, range=43.3
+  attr[218]: min=0, max=14.9, range=14.9
+  attr[219]: min=-4, max=0, range=4
+  attr[220]: min=-2.3, max=3.3, range=5.6
+  attr[221]: min=-8.6, max=13.2, range=21.8
+  attr[222]: min=-195.3, max=133.9, range=329.2
+  attr[223]: min=-95.1, max=123.6, range=218.7
+  attr[224]: min=-3.3, max=15.1, range=18.4
+  attr[225]: min=-32.9, max=0, range=32.9
+  attr[226]: min=0, max=28.4, range=28.4
+  attr[227]: min=-48.4, max=0, range=48.4
+  attr[228]: min=0, max=7, range=7
+  attr[229]: min=-5.6, max=0, range=5.6
+  attr[230]: min=-3.1, max=2.5, range=5.6
+  attr[231]: min=-11.8, max=18.8, range=30.6
+  attr[232]: min=-242.4, max=165.4, range=407.8
+  attr[233]: min=-146.2, max=137.8, range=284
+  attr[234]: min=-3.2, max=9.7, range=12.9
+  attr[235]: min=-20.4, max=0, range=20.4
+  attr[236]: min=0, max=36.4, range=36.4
+  attr[237]: min=-42.9, max=0, range=42.9
+  attr[238]: min=0, max=2.4, range=2.4
+  attr[239]: min=-0.9, max=0, range=0.9
+  attr[240]: min=-2.6, max=2.8, range=5.4
+  attr[241]: min=-8.2, max=15.6, range=23.8
+  attr[242]: min=-124.8, max=103.4, range=228.2
+  attr[243]: min=-161.4, max=182.3, range=343.7
+  attr[244]: min=-4.8, max=3.4, range=8.2
+  attr[245]: min=-14.2, max=0, range=14.2
+  attr[246]: min=0, max=29.5, range=29.5
+  attr[247]: min=-30.8, max=0, range=30.8
+  attr[248]: min=0, max=5.8, range=5.8
+  attr[249]: min=-0.9, max=2.8, range=3.7
+  attr[250]: min=-5, max=8.3, range=13.3
+  attr[251]: min=-56.8, max=82.1, range=138.9
+  attr[252]: min=-63.6, max=127.9, range=191.5
+  attr[253]: min=-5.6, max=2.7, range=8.3
+  attr[254]: min=-4.1, max=0, range=4.1
+  attr[255]: min=0, max=23.6, range=23.6
+  attr[256]: min=-28.6, max=0, range=28.6
+  attr[257]: min=0, max=0.8, range=0.8
+  attr[258]: min=-0.8, max=2.4, range=3.2
+  attr[259]: min=-6, max=6, range=12
+  attr[260]: min=-44.2, max=88.8, range=133
+  attr[261]: min=-38.6, max=115.9, range=154.5
+NominalSVDM (global):
+ConfusionMatrix Standard (rows=true, cols=pred):
+  labels: 12 10 2 1 11 3 7 5 6 8 9 13 4
+  12: 0 0 0 1 1 0 0 0 0 0 0 0 0
+  10: 0 5 0 18 0 0 0 2 0 0 0 0 0
+  2: 0 4 13 29 0 1 0 2 0 0 1 0 0
+  1: 0 21 7 189 4 0 0 8 9 2 5 0 0
+  11: 1 0 0 1 0 0 1 0 0 0 0 0 0
+  3: 0 0 0 4 0 0 0 0 0 0 0 0 0
+  7: 0 0 0 2 0 0 10 2 0 0 1 0 0
+  5: 0 1 1 17 0 0 0 0 2 0 1 0 0
+  6: 1 1 3 28 0 0 0 1 6 3 1 0 0
+  8: 1 0 0 6 0 0 0 0 0 8 0 0 0
+  9: 0 0 0 8 0 0 0 1 1 1 2 0 0
+  13: 0 0 0 1 0 0 0 2 0 0 0 6 0
+  4: 0 0 0 3 0 0 0 0 1 1 0 0 0
+ConfusionMatrix Normalized (rows=true, cols=pred):
+  labels: 12 10 2 1 11 3 7 5 6 8 9 13 4
+  12: 0 0 0 1 1 0 0 0 0 0 0 0 0
+  10: 0 5 0 18 0 0 0 2 0 0 0 0 0
+  2: 0 4 13 29 0 1 0 2 0 0 1 0 0
+  1: 0 21 7 189 4 0 0 8 9 2 5 0 0
+  11: 1 0 0 1 0 0 1 0 0 0 0 0 0
+  3: 0 0 0 4 0 0 0 0 0 0 0 0 0
+  7: 0 0 0 2 0 0 10 2 0 0 1 0 0
+  5: 0 1 1 17 0 0 0 0 2 0 1 0 0
+  6: 1 1 3 28 0 0 0 1 6 3 1 0 0
+  8: 1 0 0 6 0 0 0 0 0 8 0 0 0
+  9: 0 0 0 8 0 0 0 1 1 1 2 0 0
+  13: 0 0 0 1 0 0 0 2 0 0 0 6 0
+  4: 0 0 0 3 0 0 0 0 1 1 0 0 0
+PerClassMetrics (standard / normalized):
+  12 Precision=0 Recall=0 F1=0 | NPrecision=0 NRecall=0 NF1=0
+  10 Precision=0.15625 Recall=0.2 F1=0.175439 | NPrecision=0.15625 NRecall=0.2 NF1=0.175439
+  2 Precision=0.541667 Recall=0.26 F1=0.351351 | NPrecision=0.541667 NRecall=0.26 NF1=0.351351
+  1 Precision=0.615635 Recall=0.771429 F1=0.684783 | NPrecision=0.615635 NRecall=0.771429 NF1=0.684783
+  11 Precision=0 Recall=0 F1=0 | NPrecision=0 NRecall=0 NF1=0
+  3 Precision=0 Recall=0 F1=0 | NPrecision=0 NRecall=0 NF1=0
+  7 Precision=0.909091 Recall=0.666667 F1=0.769231 | NPrecision=0.909091 NRecall=0.666667 NF1=0.769231
+  5 Precision=0 Recall=0 F1=0 | NPrecision=0 NRecall=0 NF1=0
+  6 Precision=0.315789 Recall=0.136364 F1=0.190476 | NPrecision=0.315789 NRecall=0.136364 NF1=0.190476
+  8 Precision=0.533333 Recall=0.533333 F1=0.533333 | NPrecision=0.533333 NRecall=0.533333 NF1=0.533333
+  9 Precision=0.181818 Recall=0.153846 F1=0.166667 | NPrecision=0.181818 NRecall=0.153846 NF1=0.166667
+  13 Precision=1 Recall=0.666667 F1=0.8 | NPrecision=1 NRecall=0.666667 NF1=0.8
+  4 Precision=0 Recall=0 F1=0 | NPrecision=0 NRecall=0 NF1=0
+BalancedMetrics:
+  Bal_Precision=0.327199 Bal_Recall=0.260639 Bal_F1=0.282406
+  NBal_Precision=0.327199 NBal_Recall=0.260639 NBal_F1=0.282406
