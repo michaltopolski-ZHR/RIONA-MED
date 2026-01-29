@@ -1,0 +1,199 @@
+﻿\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[polish]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{listings}
+
+\geometry{margin=2.5cm}
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  columns=fullflexible
+}
+
+\title{Raport projektu RIONA (C++)}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Implementacja w C++}
+
+\subsection{Opis zadania projektowego}
+Celem projektu było zaimplementowanie algorytmów klasyfikacji:
+\begin{itemize}[leftmargin=1.5em]
+  \item \textbf{RIONA} (reguły + lokalne sąsiedztwo k-NN),
+  \item \textbf{RIA} (klasyfikacja oparta wyłącznie o reguły),
+  \item \textbf{k+NN} (wariant k-NN z lokalną metryką SVDM),
+\end{itemize}
+
+z wykorzystaniem miary odległości dla atrybutów nominalnych \textbf{SVDM} lub \textbf{SVDM'}. Program wykonuje klasyfikację w trybie \textbf{leave-one-out}, obsługuje tryb \textbf{globalny} i \textbf{lokalny} wyznaczania statystyk, a wyniki zapisuje do plików OUT/STAT/kNN.
+
+\subsection{Przyjęte założenia}
+\begin{itemize}[leftmargin=1.5em]
+  \item Dane wejściowe są w formacie \textbf{ARFF} (sekcje @RELATION, @ATTRIBUTE, @DATA).
+  \item \textbf{Ostatni atrybut} w pliku jest atrybutem decyzyjnym (klasa).
+  \item Typy atrybutów są wyznaczane z ARFF:
+    \begin{itemize}[leftmargin=1.5em]
+      \item numeric/real/integer $\rightarrow$ \textbf{Numeric},
+      \item string/nominal/date lub \{lista\} $\rightarrow$ \textbf{Nominal}.
+    \end{itemize}
+  \item Typy można ręcznie nadpisać parametrem \texttt{--types} (np. \texttt{n,c,n}).
+  \item Braki danych oznaczone są \texttt{?} (lub tokenem z \texttt{--missing}).
+  \item Odległości dla braków:
+    \begin{itemize}[leftmargin=1.5em]
+      \item nominalne: \textbf{2} dla SVDM, \textbf{1} dla SVDM',
+      \item numeryczne: \textbf{1}.
+    \end{itemize}
+  \item Dla atrybutów numerycznych odległość jest normalizowana przez zakres (max--min).
+  \item W SVDM wagi atrybutów \texttt{w\_i} przyjęte jako \textbf{1.0} (brak doprecyzowanej procedury wagowania).
+  \item Przy remisie wybór klasy rozstrzygany jest leksykograficznie po etykiecie klasy.
+  \item Domyślne k: \texttt{1}, \texttt{3}, \texttt{log2(n)}.
+  \item Dla k+NN: lokalna SVDM jest liczona na zbiorze \textbf{N(x,n)}, gdzie \texttt{n} domyślnie = liczba obiektów treningowych, ale zawsze \texttt{n >= k}.
+\end{itemize}
+
+\subsection{Postać danych wejściowych}
+Format ARFF (przykład skrócony):
+\begin{verbatim}
+@RELATION example
+@ATTRIBUTE attr1 numeric
+@ATTRIBUTE attr2 {A,B,C}
+@ATTRIBUTE class {yes,no}
+@DATA
+1.2,A,yes
+?,B,no
+\end{verbatim}
+
+Ważne cechy:
+\begin{itemize}[leftmargin=1.5em]
+  \item Dane są rozdzielane przecinkiem lub białymi znakami.
+  \item Linie komentarzy zaczynają się od \texttt{\%} lub \texttt{\#}.
+  \item Ostatnia kolumna to klasa decyzyjna.
+\end{itemize}
+
+Pliki przykładowe znajdują się w katalogu \texttt{data/}.
+
+\subsection{Postać danych wyjściowych}
+Dla każdego eksperymentu program tworzy osobny folder:
+\begin{verbatim}
+<outdir>/<nazwa_pliku_wejsciowego>/EXP_<suffix>/
+\end{verbatim}
+
+Gdzie \texttt{<suffix>} zawiera m.in. nazwę algorytmu, liczbę atrybutów, liczbę obiektów, k, rodzaj SVDM i tryb (g/l).
+
+W tym folderze zapisywane są pliki:
+\begin{enumerate}[leftmargin=1.5em]
+  \item \textbf{OUT\_...csv}
+    \begin{itemize}[leftmargin=1.5em]
+      \item \texttt{id, atrybuty..., RId, CId, NCId}
+      \item RId: klasa rzeczywista, CId: decyzja standardowa, NCId: decyzja znormalizowana.
+    \end{itemize}
+  \item \textbf{STAT\_...txt}
+    \begin{itemize}[leftmargin=1.5em]
+      \item podsumowanie eksperymentu: parametry, czasy, statystyki atrybutów, macierze SVDM,
+            macierze pomyłek, precision/recall/F1 (standard i znormalizowane).
+    \end{itemize}
+  \item \textbf{kNN\_...csv}
+    \begin{itemize}[leftmargin=1.5em]
+      \item lista k najbliższych sąsiadów z odległościami dla każdego obiektu.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Kwestie projektowe i implementacyjne}
+\subsubsection{Podział na moduły}
+\begin{itemize}[leftmargin=1.5em]
+  \item \texttt{src/main.cpp} -- konfiguracja, uruchamianie eksperymentów, sterowanie przepływem.
+  \item \texttt{src/arff_reader.cpp} + \texttt{include/arff_reader.h} -- parser ARFF.
+  \item \texttt{src/distance.cpp} + \texttt{include/distance.h} -- SVDM i dystanse.
+  \item \texttt{src/algorithms.cpp} + \texttt{include/algorithms.h} -- RIONA/RIA/k+NN oraz g-rule.
+  \item \texttt{src/metrics.cpp} + \texttt{include/metrics.h} -- macierze pomyłek i miary.
+  \item \texttt{src/output.cpp} + \texttt{include/output.h} -- zapis wyników.
+  \item \texttt{src/util.cpp} + \texttt{include/util.h} -- pomocnicze funkcje string/parsingu.
+  \item \texttt{include/dataset.h} -- struktury danych (Dataset, Instance, Stats itd.).
+\end{itemize}
+
+\subsubsection{Diagram zależności (uproszczony)}
+\begin{verbatim}
+ main.cpp
+   |-- ArffReader -> Dataset
+   |-- Distance (SVDM, InstanceDistance)
+   |-- Algorithms (RIONA/RIA/k+NN)
+   |-- Metrics (confusion, precision/recall/F1)
+   |-- Output (OUT/STAT/kNN)
+\end{verbatim}
+
+\subsubsection{Przepływ programu}
+\begin{enumerate}[leftmargin=1.5em]
+  \item Wczytanie danych ARFF $\rightarrow$ \texttt{Dataset}.
+  \item (Opcjonalnie) nadpisanie typów atrybutów \texttt{--types}.
+  \item Wyznaczenie globalnych statystyk (min/max/range, SVDM).
+  \item Klasyfikacja leave-one-out w trybie g/l.
+  \item Wyznaczenie wyników (standard i znormalizowane) + metryk.
+  \item Zapis plików OUT/STAT/kNN do folderu eksperymentu.
+\end{enumerate}
+
+\subsection{Podręcznik użytkownika}
+\subsubsection{Kompilacja (przykład: Clang + MSVC toolchain)}
+Uruchom w \textbf{x64 Native Tools Command Prompt for VS 2019}:
+\begin{verbatim}
+"C:\Program Files\LLVM\bin\clang++.exe" -std=c++17 -O2 -Wall -Wextra ^
+  src\main.cpp src\util.cpp src\arff_reader.cpp src\distance.cpp src\algorithms.cpp src\metrics.cpp src\output.cpp ^
+  -I include -o riona.exe
+\end{verbatim}
+
+\subsubsection{Kompilacja z CMake}
+\begin{verbatim}
+cmake -S . -B build -G "Visual Studio 16 2019" -A x64
+cmake --build build --config Release
+\end{verbatim}
+
+\subsubsection{Uruchomienie}
+\begin{verbatim}
+riona.exe --input data\heart-statlog.arff
+\end{verbatim}
+
+Przykłady parametrów:
+\begin{itemize}[leftmargin=1.5em]
+  \item \texttt{--algo riona|ria|knn|all}
+  \item \texttt{--mode g|l|both}
+  \item \texttt{--svdm svdm|svdmprime}
+  \item \texttt{--k 1,3,log}
+  \item \texttt{--n <int>} (dla k+NN)
+  \item \texttt{--missing <token>}
+  \item \texttt{--outdir <folder>}
+\end{itemize}
+
+Przykład pełny:
+\begin{verbatim}
+riona.exe --input data\yeast-mini.arff --algo all --mode both --svdm svdm --k 1,3,log --outdir results
+\end{verbatim}
+
+Wyniki znajdziesz w:
+\begin{verbatim}
+results\yeast-mini\EXP_<suffix>\
+\end{verbatim}
+
+\section{Implementacja w C\#}
+
+\subsection{Opis zadania projektowego}
+\textbf{[Do uzupełnienia]}
+
+\subsection{Przyjęte założenia}
+\textbf{[Do uzupełnienia]}
+
+\subsection{Postać danych wejściowych}
+\textbf{[Do uzupełnienia]}
+
+\subsection{Postać danych wyjściowych}
+\textbf{[Do uzupełnienia]}
+
+\subsection{Kwestie projektowe i implementacyjne}
+\textbf{[Do uzupełnienia]}
+
+\subsection{Podręcznik użytkownika}
+\textbf{[Do uzupełnienia]}
+
+\end{document}

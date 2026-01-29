@@ -1,0 +1,62 @@
+# Build artifacts
+/build/
+/build-*/
+/bin/
+/lib/
+/out/
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+*.app
+*.pdb
+*.idb
+*.ilk
+*.exp
+
+# CMake generated
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+install_manifest.txt
+compile_commands.json
+
+# Visual Studio / MSVC
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.VC.db
+*.VC.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.opensdf
+*.tlog
+*.ipch
+
+# IDEs
+.idea/
+.vscode/
+
+# Program outputs (example outdir used in README)
+results/
+
+# LaTeX build artifacts (RAPORT.tex)
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
