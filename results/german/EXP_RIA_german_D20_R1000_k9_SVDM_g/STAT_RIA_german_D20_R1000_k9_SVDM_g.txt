@@ -5,7 +5,7 @@ Algorithm: RIA
 Mode: g
 k: 9
 NominalDistance: SVDM
-Times(ms): read=21.349, preprocess=0.391, classify=30144.2, write=13.286, total=91665.9
+Times(ms): read=2.9297, preprocess=0.3826, classify=32248.2, write=14.0738, total=32265.6
 d (number of classes): 2
 ClassCounts: 1=700 2=300
 NumericStats (global):

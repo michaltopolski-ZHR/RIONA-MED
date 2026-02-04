@@ -5,7 +5,7 @@ Algorithm: RIONA
 Mode: l
 k: 1
 NominalDistance: SVDM
-Times(ms): read=21.349, preprocess=0.391, classify=641.371, write=7.5787, total=1583.4
+Times(ms): read=2.9297, preprocess=0.3826, classify=844.647, write=7.0999, total=855.059
 d (number of classes): 2
 ClassCounts: 1=700 2=300
 Note: Local mode recomputes statistics per test object.

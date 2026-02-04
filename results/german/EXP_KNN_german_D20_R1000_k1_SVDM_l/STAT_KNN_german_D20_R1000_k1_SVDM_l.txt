@@ -5,7 +5,7 @@ Algorithm: KNN
 Mode: l
 k: 1
 NominalDistance: SVDM
-Times(ms): read=21.349, preprocess=0.391, classify=1348.46, write=5.7778, total=197692
+Times(ms): read=2.9297, preprocess=0.3826, classify=2363.58, write=13.8742, total=2380.77
 d (number of classes): 2
 ClassCounts: 1=700 2=300
 Note: Local mode recomputes statistics per test object.

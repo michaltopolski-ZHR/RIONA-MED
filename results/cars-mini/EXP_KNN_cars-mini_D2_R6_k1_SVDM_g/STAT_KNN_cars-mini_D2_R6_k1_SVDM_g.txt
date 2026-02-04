@@ -5,7 +5,7 @@ Algorithm: KNN
 Mode: g
 k: 1
 NominalDistance: SVDM
-Times(ms): read=9.4329, preprocess=0.0094, classify=0.0471, write=6.2932, total=38.1052
+Times(ms): read=0.1973, preprocess=0.0072, classify=0.0493, write=1.1221, total=1.3759
 d (number of classes): 2
 ClassCounts: High=3 Low=3
 NumericStats (global):

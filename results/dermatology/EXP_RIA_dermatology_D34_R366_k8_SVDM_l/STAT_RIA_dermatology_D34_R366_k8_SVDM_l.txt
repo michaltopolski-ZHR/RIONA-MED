@@ -5,7 +5,7 @@ Algorithm: RIA
 Mode: l
 k: 8
 NominalDistance: SVDM
-Times(ms): read=12.8455, preprocess=0.368, classify=4156.87, write=6.3207, total=24270.2
+Times(ms): read=1.5338, preprocess=0.3053, classify=4427.09, write=6.4639, total=4435.39
 d (number of classes): 6
 ClassCounts: 2=61 1=112 3=72 5=52 4=49 6=20
 Note: Local mode recomputes statistics per test object.

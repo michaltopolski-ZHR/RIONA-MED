@@ -336,13 +336,11 @@ int main(int argc, char** argv) {
                 WriteKnnFile(knnFile, knnLists);
 
                 auto tWriteEnd = std::chrono::high_resolution_clock::now();
-                auto tTotalEnd = tWriteEnd;
-
                 double timeReadMs = std::chrono::duration<double, std::milli>(tReadEnd - tReadStart).count();
                 double timePrepMs = std::chrono::duration<double, std::milli>(tPrepEnd - tPrepStart).count();
                 double timeClassifyMs = std::chrono::duration<double, std::milli>(tClassifyEnd - tClassifyStart).count();
                 double timeWriteMs = std::chrono::duration<double, std::milli>(tWriteEnd - tWriteStart).count();
-                double timeTotalMs = std::chrono::duration<double, std::milli>(tTotalEnd - t0).count();
+                double timeTotalMs = timeReadMs + timePrepMs + timeClassifyMs + timeWriteMs;
 
                 WriteStatFile(statFile,
                               ds,

@@ -5,7 +5,7 @@ Algorithm: RIONA
 Mode: g
 k: 2
 NominalDistance: SVDM
-Times(ms): read=9.4329, preprocess=0.0094, classify=0.0339, write=1.4244, total=13.8962
+Times(ms): read=0.1973, preprocess=0.0072, classify=0.025, write=1.495, total=1.7245
 d (number of classes): 2
 ClassCounts: High=3 Low=3
 NumericStats (global):
