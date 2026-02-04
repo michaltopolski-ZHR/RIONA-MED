@@ -1,0 +1,57 @@
+﻿InputFile: tae.csv
+D (liczba atrybutow): 5
+R (liczba obiektow): 151
+Algorithm: Riona
+k: 3
+NominalDistance: SVDM
+Mode: g
+NumericAttributes: 5
+NominalAttributes: 0
+
+TIMINGS(ms):
+  Read:           12
+  Preprocess:     2
+  Classification: 21
+  Write:          20
+  Total:          55
+
+d (liczba klas decyzyjnych): 3
+Liczebnosci klas:
+  3: 52
+  2: 50
+  1: 49
+
+STATYSTYKI_NUMERYCZNE (min/max/range):
+  Attr[0] min=1 max=2 range=1
+  Attr[1] min=1 max=25 range=24
+  Attr[2] min=1 max=26 range=25
+  Attr[3] min=1 max=2 range=1
+  Attr[4] min=3 max=66 range=63
+
+MACIERZ_POMYLEK_STANDARD (CId) (wiersze=RId, kolumny=CId):
+    3	2	1
+3	40	7	5
+2	12	27	11
+1	6	9	34
+
+MIARY_STANDARD (CId):
+  Precyzja_0(3)=0.68965517241379315 Odzysk_0(3)=0.76923076923076927 F1_0(3)=0.7272727272727274
+  Precyzja_1(2)=0.62790697674418605 Odzysk_1(2)=0.54000000000000004 F1_1(2)=0.58064516129032262
+  Precyzja_2(1)=0.68000000000000005 Odzysk_2(1)=0.69387755102040816 F1_2(1)=0.68686868686868696
+Precyzja_balanced=0.66585404971932638
+Odzysk_balanced=0.66770277341705908
+F1_balanced=0.66492885847724559
+
+MACIERZ_POMYLEK_ZNORMALIZOWANA (NCId) (wiersze=RId, kolumny=NCId):
+    3	2	1
+3	37	7	8
+2	12	27	11
+1	6	9	34
+
+MIARY_ZNORMALIZOWANA (NCId):
+  NPrecyzja_0(3)=0.67272727272727273 NOdzysk_0(3)=0.71153846153846156 NF1_0(3)=0.69158878504672894
+  NPrecyzja_1(2)=0.62790697674418605 NOdzysk_1(2)=0.54000000000000004 NF1_1(2)=0.58064516129032262
+  NPrecyzja_2(1)=0.64150943396226412 NOdzysk_2(1)=0.69387755102040816 NF1_2(1)=0.66666666666666663
+NPrecyzja_balanced=0.64738122781124086
+NOdzysk_balanced=0.64847200418628992
+NF1_balanced=0.6463002043345728

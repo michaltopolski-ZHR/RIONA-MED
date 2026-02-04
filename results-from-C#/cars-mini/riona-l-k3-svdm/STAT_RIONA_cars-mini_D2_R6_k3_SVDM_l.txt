@@ -1,0 +1,55 @@
+﻿InputFile: cars-mini.csv
+D (liczba atrybutow): 2
+R (liczba obiektow): 6
+Algorithm: Riona
+k: 3
+NominalDistance: SVDM
+Mode: l
+NumericAttributes: 1
+NominalAttributes: 1
+
+TIMINGS(ms):
+  Read:           14
+  Preprocess:     1
+  Classification: 4
+  Write:          16
+  Total:          35
+
+d (liczba klas decyzyjnych): 2
+Liczebnosci klas:
+  High: 3
+  Low: 3
+
+STATYSTYKI_NUMERYCZNE (min/max/range):
+  Attr[0] min=17 max=68 range=51
+
+MACIERZE_SVDM:
+  NOM_ATTR[1] values=3
+    Family,Sport,Truck
+    Family:0,0.33333333333333331,1.3333333333333335
+    Sport:0.33333333333333331,0,1
+    Truck:1.3333333333333335,1,0
+
+MACIERZ_POMYLEK_STANDARD (CId) (wiersze=RId, kolumny=CId):
+    High	Low
+High	2	1
+Low	3	0
+
+MIARY_STANDARD (CId):
+  Precyzja_0(High)=0.40000000000000002 Odzysk_0(High)=0.66666666666666663 F1_0(High)=0.5
+  Precyzja_1(Low)=0 Odzysk_1(Low)=0 F1_1(Low)=0
+Precyzja_balanced=0.20000000000000001
+Odzysk_balanced=0.33333333333333331
+F1_balanced=0.25
+
+MACIERZ_POMYLEK_ZNORMALIZOWANA (NCId) (wiersze=RId, kolumny=NCId):
+    High	Low
+High	2	1
+Low	3	0
+
+MIARY_ZNORMALIZOWANA (NCId):
+  NPrecyzja_0(High)=0.40000000000000002 NOdzysk_0(High)=0.66666666666666663 NF1_0(High)=0.5
+  NPrecyzja_1(Low)=0 NOdzysk_1(Low)=0 NF1_1(Low)=0
+NPrecyzja_balanced=0.20000000000000001
+NOdzysk_balanced=0.33333333333333331
+NF1_balanced=0.25

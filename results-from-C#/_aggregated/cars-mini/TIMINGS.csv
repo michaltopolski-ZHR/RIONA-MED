@@ -1,0 +1,15 @@
+Algorithm,Mode,k,read,preprocess,classify,write,total
+Knn,g,1,11,1,3,40,56
+Knn,g,2,12,1,4,16,34
+Knn,g,3,11,2,4,18,35
+Knn,l,1,12,1,3,18,35
+Knn,l,2,14,2,5,17,37
+Knn,l,3,12,1,4,16,33
+Ria,g,3,14,1,5,17,38
+Ria,l,3,13,1,4,20,38
+Riona,g,1,13,1,4,16,34
+Riona,g,2,14,1,5,17,38
+Riona,g,3,18,2,5,18,43
+Riona,l,1,13,1,4,17,35
+Riona,l,2,15,2,6,18,41
+Riona,l,3,14,1,4,16,35

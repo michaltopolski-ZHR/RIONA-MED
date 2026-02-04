@@ -1,0 +1,33 @@
+InputFile: cars-mini.arff
+Attributes: 2
+Objects: 6
+Algorithm: RIA
+Mode: l
+k: 1
+NominalDistance: SVDM
+Times(ms): read=9.4329, preprocess=0.0094, classify=0.0478, write=1.1759, total=27.7067
+d (number of classes): 2
+ClassCounts: High=3 Low=3
+Note: Local mode recomputes statistics per test object.
+Global stats below are provided for reference.
+NumericStats (global):
+  attr[0]: min=17, max=68, range=51
+NominalSVDM (global):
+  attr[1] values: Family Sport Truck
+    Family: 0 0.333333 1.33333
+    Sport: 0.333333 0 1
+    Truck: 1.33333 1 0
+ConfusionMatrix Standard (rows=true, cols=pred):
+  labels: High Low
+  High: 2 1
+  Low: 3 0
+ConfusionMatrix Normalized (rows=true, cols=pred):
+  labels: High Low
+  High: 3 0
+  Low: 2 1
+PerClassMetrics (standard / normalized):
+  High Precision=0.4 Recall=0.666667 F1=0.5 | NPrecision=0.6 NRecall=1 NF1=0.75
+  Low Precision=0 Recall=0 F1=0 | NPrecision=1 NRecall=0.333333 NF1=0.5
+BalancedMetrics:
+  Bal_Precision=0.2 Bal_Recall=0.333333 Bal_F1=0.25
+  NBal_Precision=0.8 NBal_Recall=0.666667 NBal_F1=0.625

@@ -1,0 +1,40 @@
+InputFile: tae.arff
+Attributes: 5
+Objects: 151
+Algorithm: RIONA
+Mode: l
+k: 3
+NominalDistance: SVDM
+Times(ms): read=1.0505, preprocess=0.0143, classify=4.7126, write=2.1383, total=34.4891
+d (number of classes): 3
+ClassCounts: 3=52 2=50 1=49
+Note: Local mode recomputes statistics per test object.
+Global stats below are provided for reference.
+NumericStats (global):
+  attr[1]: min=1, max=25, range=24
+  attr[2]: min=1, max=26, range=25
+  attr[4]: min=3, max=66, range=63
+NominalSVDM (global):
+  attr[0] values: 1 2
+    1: 0 0.684002
+    2: 0.684002 0
+  attr[3] values: 1 2
+    1: 0 0.726223
+    2: 0.726223 0
+ConfusionMatrix Standard (rows=true, cols=pred):
+  labels: 3 2 1
+  3: 34 6 12
+  2: 12 26 12
+  1: 6 7 36
+ConfusionMatrix Normalized (rows=true, cols=pred):
+  labels: 3 2 1
+  3: 34 6 12
+  2: 12 26 12
+  1: 6 7 36
+PerClassMetrics (standard / normalized):
+  3 Precision=0.653846 Recall=0.653846 F1=0.653846 | NPrecision=0.653846 NRecall=0.653846 NF1=0.653846
+  2 Precision=0.666667 Recall=0.52 F1=0.58427 | NPrecision=0.666667 NRecall=0.52 NF1=0.58427
+  1 Precision=0.6 Recall=0.734694 F1=0.66055 | NPrecision=0.6 NRecall=0.734694 NF1=0.66055
+BalancedMetrics:
+  Bal_Precision=0.640171 Bal_Recall=0.63618 Bal_F1=0.632889
+  NBal_Precision=0.640171 NBal_Recall=0.63618 NBal_F1=0.632889

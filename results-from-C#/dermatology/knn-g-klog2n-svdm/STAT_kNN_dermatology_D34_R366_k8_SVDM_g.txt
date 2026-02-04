@@ -1,0 +1,101 @@
+﻿InputFile: dermatology.csv
+D (liczba atrybutow): 34
+R (liczba obiektow): 366
+Algorithm: Knn
+k: 8
+NominalDistance: SVDM
+Mode: g
+NumericAttributes: 34
+NominalAttributes: 0
+
+TIMINGS(ms):
+  Read:           21
+  Preprocess:     14
+  Classification: 112
+  Write:          44
+  Total:          191
+
+d (liczba klas decyzyjnych): 6
+Liczebnosci klas:
+  2: 61
+  1: 112
+  3: 72
+  5: 52
+  4: 49
+  6: 20
+
+STATYSTYKI_NUMERYCZNE (min/max/range):
+  Attr[0] min=0 max=3 range=3
+  Attr[1] min=0 max=3 range=3
+  Attr[2] min=0 max=3 range=3
+  Attr[3] min=0 max=3 range=3
+  Attr[4] min=0 max=3 range=3
+  Attr[5] min=0 max=3 range=3
+  Attr[6] min=0 max=3 range=3
+  Attr[7] min=0 max=3 range=3
+  Attr[8] min=0 max=3 range=3
+  Attr[9] min=0 max=3 range=3
+  Attr[10] min=0 max=1 range=1
+  Attr[11] min=0 max=3 range=3
+  Attr[12] min=0 max=2 range=2
+  Attr[13] min=0 max=3 range=3
+  Attr[14] min=0 max=3 range=3
+  Attr[15] min=0 max=3 range=3
+  Attr[16] min=0 max=3 range=3
+  Attr[17] min=0 max=3 range=3
+  Attr[18] min=0 max=3 range=3
+  Attr[19] min=0 max=3 range=3
+  Attr[20] min=0 max=3 range=3
+  Attr[21] min=0 max=3 range=3
+  Attr[22] min=0 max=3 range=3
+  Attr[23] min=0 max=3 range=3
+  Attr[24] min=0 max=3 range=3
+  Attr[25] min=0 max=3 range=3
+  Attr[26] min=0 max=3 range=3
+  Attr[27] min=0 max=3 range=3
+  Attr[28] min=0 max=3 range=3
+  Attr[29] min=0 max=3 range=3
+  Attr[30] min=0 max=3 range=3
+  Attr[31] min=0 max=3 range=3
+  Attr[32] min=0 max=3 range=3
+  Attr[33] min=0 max=75 range=75
+
+MACIERZ_POMYLEK_STANDARD (CId) (wiersze=RId, kolumny=CId):
+    2	1	3	5	4	6
+2	54	0	0	0	7	0
+1	1	111	0	0	0	0
+3	0	0	72	0	0	0
+5	0	0	0	52	0	0
+4	2	0	0	0	47	0
+6	0	0	0	0	0	20
+
+MIARY_STANDARD (CId):
+  Precyzja_0(2)=0.94736842105263153 Odzysk_0(2)=0.88524590163934425 F1_0(2)=0.9152542372881356
+  Precyzja_1(1)=1 Odzysk_1(1)=0.9910714285714286 F1_1(1)=0.99551569506726456
+  Precyzja_2(3)=1 Odzysk_2(3)=1 F1_2(3)=1
+  Precyzja_3(5)=1 Odzysk_3(5)=1 F1_3(5)=1
+  Precyzja_4(4)=0.87037037037037035 Odzysk_4(4)=0.95918367346938771 F1_4(4)=0.91262135922330101
+  Precyzja_5(6)=1 Odzysk_5(6)=1 F1_5(6)=1
+Precyzja_balanced=0.96962313190383365
+Odzysk_balanced=0.97258350061336019
+F1_balanced=0.9705652152631169
+
+MACIERZ_POMYLEK_ZNORMALIZOWANA (NCId) (wiersze=RId, kolumny=NCId):
+    2	1	3	5	4	6
+2	53	0	0	0	8	0
+1	1	109	0	1	0	1
+3	0	0	72	0	0	0
+5	0	0	0	52	0	0
+4	1	0	0	0	48	0
+6	0	0	0	0	0	20
+
+MIARY_ZNORMALIZOWANA (NCId):
+  NPrecyzja_0(2)=0.96363636363636362 NOdzysk_0(2)=0.86885245901639341 NF1_0(2)=0.9137931034482758
+  NPrecyzja_1(1)=1 NOdzysk_1(1)=0.9732142857142857 NF1_1(1)=0.98642533936651589
+  NPrecyzja_2(3)=1 NOdzysk_2(3)=1 NF1_2(3)=1
+  NPrecyzja_3(5)=0.98113207547169812 NOdzysk_3(5)=1 NF1_3(5)=0.99047619047619051
+  NPrecyzja_4(4)=0.8571428571428571 NOdzysk_4(4)=0.97959183673469385 NF1_4(4)=0.91428571428571426
+  NPrecyzja_5(6)=0.95238095238095233 NOdzysk_5(6)=1 NF1_5(6)=0.97560975609756095
+NPrecyzja_balanced=0.95904870810531184
+NOdzysk_balanced=0.97027643024422883
+NF1_balanced=0.96343168394570966

@@ -1,0 +1,13 @@
+@RELATION RiskAssessment
+
+@ATTRIBUTE Age numeric
+@ATTRIBUTE CarType {Family,Sport,Truck}
+@ATTRIBUTE Risk {High,Low}
+
+@DATA
+23,Family,High
+17,Sport,High
+43,Sport,Low
+68,Family,Low
+32,Truck,Low
+20,Family,High
